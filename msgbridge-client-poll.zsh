@@ -15,7 +15,7 @@ typeset host_self=$(hostname)
 (
   while sleep ${interval}
   do
-    ssh -i ~/tmp/test_ecdsa ${host} ~/.local/bin/msgbridge-server-get.zsh ${host_self} | msgbridge-client.rb
+    ssh -i ~/tmp/test_ecdsa ${host} msgbridge-server-get.zsh ${host_self} | msgbridge-client.rb
   done
 ) &
 
